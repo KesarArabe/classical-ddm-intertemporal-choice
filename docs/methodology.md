@@ -286,5 +286,3 @@ in `docs/limitations.md`. The main points are:
   nothing about out-of-study transfer.
 - The PIT and posterior predictive checks are in-sample diagnostics; the
   held-out log scores and PIT are the predictive checks.
-
-watch me bath live on your mum's phone
