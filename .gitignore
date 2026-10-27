@@ -1,0 +1,30 @@
+# Raw data (large, licensed, and not redistributed here).
+# The analysis normally reads ../data/itc_all_data.csv, outside this project.
+data/*.csv
+data/*.RData
+!data/README.md
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+
+# Keep the analysis logs under logs/ (they document the completed run).
+!logs/*.log

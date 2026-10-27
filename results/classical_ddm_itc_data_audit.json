@@ -1,0 +1,40 @@
+{
+  "verification": {
+    "path": "C:\\Users\\ARAVE\\OneDrive\\Documents\\Default Project\\data\\itc_all_data.csv",
+    "size": 484996376,
+    "size_ok": true,
+    "sha256": "14e5bf2f6434d791a5f68d8f0e4cec41e4c6bb671ce6fd80e83879f9759e0517",
+    "sha256_ok": true
+  },
+  "audit": {
+    "raw_rows": 1172644,
+    "after_subject_exclusion": 1132944,
+    "after_trial_exclusion": 1025890,
+    "after_rt_range": 1015811,
+    "after_valid_stimuli_choice": 997324,
+    "after_design_filters": 86466,
+    "studies": 12,
+    "subjects": 553,
+    "trials": 86466,
+    "sessions": 621,
+    "median_trials_per_subject": 109.0,
+    "min_trials_per_subject": 7,
+    "max_trials_per_subject": 380,
+    "subjects_ge_150_trials": 253,
+    "subjects_ge_300_trials": 70,
+    "studies_list": [
+      "Bixter_2015_Exp1",
+      "Bixter_2015_Exp2",
+      "Bruder_2021",
+      "Gluth_2017_Exp1",
+      "Gluth_2017_Exp2",
+      "Herting_2010",
+      "Knauth_2022",
+      "Konstantinidis_2020",
+      "Lempert_2015",
+      "Robinson_2015",
+      "Zhou_2022",
+      "Zilker_2021"
+    ]
+  }
+}

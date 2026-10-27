@@ -1,0 +1,8 @@
+# Versions verified in the existing project environment (Python 3.10.11).
+# No new packages are required to reproduce the classical-DDM analysis.
+pyddm==0.9.0
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.3.3
+matplotlib==3.10.9
+tabulate==0.10.0

@@ -1,0 +1,1 @@
+"""Classical DDM implementation."""

@@ -1,0 +1,905 @@
+{
+  "created_utc": "2026-10-25T09:00:13.905690+00:00",
+  "dataset": {
+    "path": "C:\\Users\\ARAVE\\OneDrive\\Documents\\Default Project\\data\\itc_all_data.csv",
+    "size": 484996376,
+    "size_ok": true,
+    "sha256": "14e5bf2f6434d791a5f68d8f0e4cec41e4c6bb671ce6fd80e83879f9759e0517",
+    "sha256_ok": true
+  },
+  "config": {
+    "path": "experiments/classical_ddm/config.json",
+    "sha256": "663016811553d86ed3fff80c2312bfa835d579098e27c10826f2d436180a48cd",
+    "contents": {
+      "data": {
+        "path": "../data/itc_all_data.csv",
+        "sha256": "14e5bf2f6434d791a5f68d8f0e4cec41e4c6bb671ce6fd80e83879f9759e0517",
+        "size": 484996376
+      },
+      "cleaning": {
+        "rt_min": 0.2,
+        "rt_max": 20.0,
+        "require_positive_amounts": true,
+        "require_ss_time_lt_ll_time": true,
+        "require_valid_choice": true,
+        "exclude_time_pressure": true,
+        "required_presentation": "Simultaneous",
+        "exclude_mouse_finger": true,
+        "required_rt_in_full_seconds": 0,
+        "required_rt_data_analyzed": 1
+      },
+      "expected_primary": {
+        "studies": 12,
+        "subjects": 553,
+        "trials": 86466
+      },
+      "primary_studies": [
+        "Bixter_2015_Exp1",
+        "Bixter_2015_Exp2",
+        "Bruder_2021",
+        "Gluth_2017_Exp1",
+        "Gluth_2017_Exp2",
+        "Herting_2010",
+        "Knauth_2022",
+        "Konstantinidis_2020",
+        "Lempert_2015",
+        "Robinson_2015",
+        "Zhou_2022",
+        "Zilker_2021"
+      ],
+      "pilot_studies": [
+        "Lempert_2015",
+        "Knauth_2022"
+      ],
+      "model": {
+        "n_terms": 100,
+        "fixed_noise": 1.0,
+        "fixed_start_proportion": 0.5
+      },
+      "fitting": {
+        "n_starts": 5,
+        "maxiter": 400,
+        "start_objective_tolerance": 0.01
+      },
+      "validation": {
+        "n_recovery_datasets": 5,
+        "n_recovery_trials": 3000,
+        "simulation_dt": 0.0001,
+        "recovery_true_params": {
+          "a": 1.2,
+          "t0": 0.3,
+          "v0": 0.2,
+          "beta_amount": 0.8,
+          "beta_delay": -0.6
+        },
+        "seed": 20261024
+      },
+      "ppc": {
+        "n_sim": 20000,
+        "seed": 20261024,
+        "simulation_dt": 0.0001
+      },
+      "cross_validation": {
+        "n_folds": 5,
+        "seed": 20261024,
+        "n_starts": 2
+      },
+      "lempert": {
+        "profile_points": 15
+      }
+    }
+  },
+  "environment": {
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  },
+  "settings": {
+    "n_starts": 5,
+    "maxiter": 400,
+    "n_terms": 100,
+    "ppc_n_sim": 20000,
+    "ppc_dt": 0.0001,
+    "cv_folds": 5,
+    "cv_seed": 20261024,
+    "cv_n_starts": 2
+  },
+  "failures": {
+    "fits": [],
+    "cv": []
+  },
+  "checks": {
+    "dataset_hash_verified": true,
+    "expected_sample_size": true,
+    "all_12_studies_fitted": true,
+    "all_fits_converged": true,
+    "all_hessians_positive_definite": true,
+    "cross_validation_complete": true,
+    "lempert_investigation_written": true,
+    "pyddm_max_abs_error_below_1e_6": true,
+    "normalisation_total_error_below_1e_4": true
+  },
+  "files": [
+    {
+      "relative_path": "classical_ddm_itc_data_audit.json",
+      "size_bytes": 1103,
+      "sha256": "82d722327be923378e29351d07986caffb616d1723256e385094486ce52ee689"
+    },
+    {
+      "relative_path": "classical_ddm_itc_parameter_recovery_summary.json",
+      "size_bytes": 1376,
+      "sha256": "8631594dbfbc2a0d43df5d3dca8ee01625db5ce4ff3c305aa764a1d498d03c18"
+    },
+    {
+      "relative_path": "classical_ddm_itc_parameter_recovery_trials.csv",
+      "size_bytes": 1513,
+      "sha256": "9638fe13e4825522ddae311bcf9878f92fe615f086ea579cee84d550903cc935"
+    },
+    {
+      "relative_path": "classical_ddm_itc_study_profile.csv",
+      "size_bytes": 1163,
+      "sha256": "6c65f55b69ffc36d6194a5a08e10c49760ab8955d768d979893e26227b2315d6"
+    },
+    {
+      "relative_path": "classical_ddm_itc_validation.json",
+      "size_bytes": 8416,
+      "sha256": "499f32e696a09152a8dfe29df03ea30b58b48a1cae97547bd84ef1f56f5a27e5"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp1_choice_by_amount_delay.png",
+      "size_bytes": 49993,
+      "sha256": "8c5f7416e064c6e8413b8f811562f67c0a8848127a198f057c4a6f0a382cfb12"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp1_choice_calibration.png",
+      "size_bytes": 38786,
+      "sha256": "8f77bd72db79d47a037247c09818af718e90cd3beb33a3d1f139268204fb00bc"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp1_pit_calibration.png",
+      "size_bytes": 38647,
+      "sha256": "5129599e91fb23f73b694d935b26ee6539b173d1a545aa056bd10c39ea1013d4"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp1_reaction_time_quantiles.png",
+      "size_bytes": 69854,
+      "sha256": "550de3c5e12db5e494ff707c6631926518164a148f1b11e5528b66ee9bad37f8"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp1_reaction_time_tail.png",
+      "size_bytes": 84090,
+      "sha256": "dd2b7f673a20709904a58607d1bc359e3f81a7cd3e9b05227abd1c0ee76bcc49"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp2_choice_by_amount_delay.png",
+      "size_bytes": 49922,
+      "sha256": "47cd7b16d97b8815211c7b085ddca51ecf8f57f9a0e8ea6b1f8a4d444c02d9d6"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp2_choice_calibration.png",
+      "size_bytes": 37488,
+      "sha256": "4a581d2adc02c97bcbfe87ecd5f8fce1f8af14ca60251bd29af4af0ab9885469"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp2_pit_calibration.png",
+      "size_bytes": 38738,
+      "sha256": "ef882b6ce398c8c41a17139cc65b65f38bd3b9b074bb71ce8b94b32e62319b32"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp2_reaction_time_quantiles.png",
+      "size_bytes": 69626,
+      "sha256": "4653df7beadb7145928a02c5199d78cf9bdca94a06b454c324d19f434cf2118f"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bixter_2015_Exp2_reaction_time_tail.png",
+      "size_bytes": 82023,
+      "sha256": "e42f48c7dc14a800fd395cda6b24e68c605ca605d74f1c9ca680c7e7e449aeef"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bruder_2021_choice_by_amount_delay.png",
+      "size_bytes": 49267,
+      "sha256": "d1dd20830432804516519e239805d1ad316973a2de7785d352f8b15e4d488b65"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bruder_2021_choice_calibration.png",
+      "size_bytes": 38835,
+      "sha256": "e02b0874792bfdf772d83b767c9b2502336196001f760cdd02886eee45ea8381"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bruder_2021_pit_calibration.png",
+      "size_bytes": 35972,
+      "sha256": "a11c585cb57af2e77a416af3e3faabc35050919830c7d408e4f69d10e81b2323"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bruder_2021_reaction_time_quantiles.png",
+      "size_bytes": 63264,
+      "sha256": "c2f3202b292e2da8dd11bddbafce0e83c110cba79a7681a382f585fff114d36b"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Bruder_2021_reaction_time_tail.png",
+      "size_bytes": 79290,
+      "sha256": "5cdfa07c7d7169e8295ad0f596796dcb0e690f105795ddb0daf7a21a0d5644b3"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp1_choice_by_amount_delay.png",
+      "size_bytes": 49071,
+      "sha256": "2c1f30129e483d9dee337bbe8c3d3806ca3c15a726e76001a8bf725fd2a0e07c"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp1_choice_calibration.png",
+      "size_bytes": 38118,
+      "sha256": "939202bb5354acc1174bfce53636273ecd9ed1e3a6b9a1b809e0d86604a980fe"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp1_pit_calibration.png",
+      "size_bytes": 37689,
+      "sha256": "03a50544e1c166cb07eb34fa7fdfb972e6e76a9c0e46e9a80f9a47cb470731bd"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp1_reaction_time_quantiles.png",
+      "size_bytes": 64827,
+      "sha256": "95ca4ee2f858eacae5bfa615e20171db848b834f69a090bc11507c3c10903c02"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp1_reaction_time_tail.png",
+      "size_bytes": 76972,
+      "sha256": "a8ad9565fe083caacd0500fc85e8223554fa6f54c0f4d41d9bbb538284523c95"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp2_choice_by_amount_delay.png",
+      "size_bytes": 49075,
+      "sha256": "623ef0e14b3a5b44c6c259f5f8184b4416f33455ca5e162e1809bbdf8f86559e"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp2_choice_calibration.png",
+      "size_bytes": 36282,
+      "sha256": "7ea66d029d8d0c53dc5f529a4756d4c8881401f37459630dde672ddc1246ede7"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp2_pit_calibration.png",
+      "size_bytes": 37870,
+      "sha256": "c3188807372d72b9316ccfb0405b51a37d7e22265bd750e071aac786c71067f1"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp2_reaction_time_quantiles.png",
+      "size_bytes": 60918,
+      "sha256": "85a2b48f6fcd45d928b6bcfb9762b9df4bfcfb9d5503b8bf58d2d1461b06c984"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Gluth_2017_Exp2_reaction_time_tail.png",
+      "size_bytes": 79203,
+      "sha256": "31fc4b5d7be3f6b1d8507109c6e7e93f45342b7b57772a1cbfed3d6975e0ff5c"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Herting_2010_choice_by_amount_delay.png",
+      "size_bytes": 49216,
+      "sha256": "b0e349cf12d54c20998aadd66fc44bc2ebabbd1af9038cbf2ce27b387080df08"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Herting_2010_choice_calibration.png",
+      "size_bytes": 39638,
+      "sha256": "f9d6579d8c2aca166983e77f575841ea62093c376f979b80dde2689f7ae68e07"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Herting_2010_pit_calibration.png",
+      "size_bytes": 36370,
+      "sha256": "a0fe6069fb6c560dbe65433293ce3622945a9fe5b9a39d172681827bdac8ca62"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Herting_2010_reaction_time_quantiles.png",
+      "size_bytes": 66788,
+      "sha256": "d273c5f9ea97646d0746e03e64400f29973190250fc65265d0f31a2b0a98b2b8"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Herting_2010_reaction_time_tail.png",
+      "size_bytes": 78063,
+      "sha256": "d9d276841458bd8f37345c02909b6bc9a98071f13a263d0df29d4fcd39bdd5bb"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Knauth_2022_choice_by_amount_delay.png",
+      "size_bytes": 48813,
+      "sha256": "a1417c36274eb84d1763afa52f0b3ffece4b4c46d1118d5dc66057474cbd3eb7"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Knauth_2022_choice_calibration.png",
+      "size_bytes": 38803,
+      "sha256": "2db3b4ba8579164e8c43dd0bd9bff7c5e57a0417e366eed01e5e825952f5238c"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Knauth_2022_pit_calibration.png",
+      "size_bytes": 37898,
+      "sha256": "38801fddb15258fa9bd41cad85bae7987b562e0443d7e410bc4126ae85c4b397"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Knauth_2022_reaction_time_quantiles.png",
+      "size_bytes": 70984,
+      "sha256": "a9c5aceb87e73c68bc04a8511147465037564f2a037ec3ca72f28307304afd56"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Knauth_2022_reaction_time_tail.png",
+      "size_bytes": 82730,
+      "sha256": "f75a23a5918ec9221299f1d83898ebb5be40185b88c08c8596c6d66014d784ed"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Konstantinidis_2020_choice_by_amount_delay.png",
+      "size_bytes": 50527,
+      "sha256": "1209702cb52d7d626c142c2f301dd87ace1bbe32fae9072a2c875b1402d4b048"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Konstantinidis_2020_choice_calibration.png",
+      "size_bytes": 41751,
+      "sha256": "e73d42812b80f86a50792313b0afe48cbf1f68283bac640dbc2b246d0ded28f6"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Konstantinidis_2020_pit_calibration.png",
+      "size_bytes": 34525,
+      "sha256": "7f8f2fc05ef7378ffd8198aed70b70f356d721cd6b0d1f034cc6630f88cea4ce"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Konstantinidis_2020_reaction_time_quantiles.png",
+      "size_bytes": 64561,
+      "sha256": "5768b7842f7c85920316a4dc1fc7ed0ee4cd0b48767d395dab8e5755595c3c9b"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Konstantinidis_2020_reaction_time_tail.png",
+      "size_bytes": 84875,
+      "sha256": "43a066bce93272d9e604b41574f586f52d87dabe0453f692825b1156265ea638"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Lempert_2015_choice_by_amount_delay.png",
+      "size_bytes": 49170,
+      "sha256": "79ed09501e946b510a67d9b07bb8ef4df1f41672a762311c27421de1edb6c6a0"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Lempert_2015_choice_calibration.png",
+      "size_bytes": 41988,
+      "sha256": "34b898a72c4ab52433c0a8a11acd4aa419cc12d33cbfecb1c26fb548dc3a9693"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Lempert_2015_pit_calibration.png",
+      "size_bytes": 38349,
+      "sha256": "37c07445c19151f87addc32f738c7a3a8d4c122a558b957b890675ba521597e3"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Lempert_2015_reaction_time_quantiles.png",
+      "size_bytes": 62638,
+      "sha256": "449c28e99cb565dc4336f16545a1d5037f0801c642bdb3fa5241d2b9a96bb510"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Lempert_2015_reaction_time_tail.png",
+      "size_bytes": 75622,
+      "sha256": "c57b7be9832befb71034fd82a4239c5efa0520c4f61a9f30f01ebbfe04d050f5"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_parameter_recovery.png",
+      "size_bytes": 78669,
+      "sha256": "10cdb3bff63568d5dbdda7c8c083a6c4e19af3516c5f00ea29291c08b2e87d93"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Robinson_2015_choice_by_amount_delay.png",
+      "size_bytes": 48696,
+      "sha256": "319efd83e405b43910431e0ece150d9e40cc99f474251c3cb4812e2cdec53030"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Robinson_2015_choice_calibration.png",
+      "size_bytes": 37379,
+      "sha256": "eb31c4243b0b4d5b35368c5930e7cb04bc5be51748fc30a377b9ee1b14def215"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Robinson_2015_pit_calibration.png",
+      "size_bytes": 36044,
+      "sha256": "cfc215fefdb86b2aa26b4fec01861a86327b874c1a347dc88f1eeeea2daabec5"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Robinson_2015_reaction_time_quantiles.png",
+      "size_bytes": 67568,
+      "sha256": "43ae7580ce460c60a038705ca8efe01162efab072c60b39dcf6a4ce1fb48abc3"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Robinson_2015_reaction_time_tail.png",
+      "size_bytes": 80438,
+      "sha256": "7d5b7eeb07e9b1fef1fa342a51d0c61f9a4590d41d4612a9fb16f516ad3133f3"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_study_parameter_forest_plot.png",
+      "size_bytes": 87149,
+      "sha256": "b88eb5023320bce29260603fe15c088693ec2d754baab0f2689a189011e5bb42"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_study_summary_metrics.png",
+      "size_bytes": 70820,
+      "sha256": "5aec1029e151253cc6972144d35dee3f1a18996b406695589541e23bbbfb6cdd"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zhou_2022_choice_by_amount_delay.png",
+      "size_bytes": 48549,
+      "sha256": "9c78ba75372953c882cabb091f02811b601eeba9b37b818b028831cb2933d389"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zhou_2022_choice_calibration.png",
+      "size_bytes": 38319,
+      "sha256": "7afdf15add71ab928ffb8571b06ba15445b0c4128bdb9ec16ca0708986de7684"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zhou_2022_pit_calibration.png",
+      "size_bytes": 36838,
+      "sha256": "7a8a43d7d15abc6c35cb1133ff54ecf2ef6b85f856413710a32af8e9e2e39ee1"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zhou_2022_reaction_time_quantiles.png",
+      "size_bytes": 65805,
+      "sha256": "dc6e24c354755d67c06f261db78c706d16c8c746f7a34895341a654e1822f010"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zhou_2022_reaction_time_tail.png",
+      "size_bytes": 78698,
+      "sha256": "bfd0402572ca1e800207d58f7903884eac809fc02d0f866578bc5d661c556232"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zilker_2021_choice_by_amount_delay.png",
+      "size_bytes": 48673,
+      "sha256": "db3c62cf7a990e26f053eddf1134f8b0378ee07fc963100dab2b0516276484c5"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zilker_2021_choice_calibration.png",
+      "size_bytes": 38265,
+      "sha256": "9b3188a52156aa4206cfff5232ae8707ad6ebb7f46a51e2b0a5dad33c602c772"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zilker_2021_pit_calibration.png",
+      "size_bytes": 36378,
+      "sha256": "02856c88c83c97a623cb1c7db8eabcb4b090a27e56d79d2707d724ccbb5bd010"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zilker_2021_reaction_time_quantiles.png",
+      "size_bytes": 65310,
+      "sha256": "222af45778a74b5de4d064b556dbd674b7ff7aeeee2242cfbfeb64e72c15edfd"
+    },
+    {
+      "relative_path": "figures/classical_ddm_itc_Zilker_2021_reaction_time_tail.png",
+      "size_bytes": 81230,
+      "sha256": "dd5f3696f0dccafe8887d18d5f2306dc520568f75395adac117d2998bf221d5d"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bixter_2015_Exp1_clustered_uncertainty.json",
+      "size_bytes": 12274,
+      "sha256": "bcb5cab1af810a05b8faf9d7fc99eac2379403fe790ec4cfae3c624610c7e150"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bixter_2015_Exp1_diagnostics.json",
+      "size_bytes": 21551,
+      "sha256": "78cf551209a1ba9e53de32b8ccad5d4d48523a834ee27185785542cc2b52aaa9"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bixter_2015_Exp1_fit.json",
+      "size_bytes": 4228,
+      "sha256": "8474682914de5b9a1698cd363559c1613128ed943b717cca14d3dc9987af2288"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bixter_2015_Exp1_parameters.csv",
+      "size_bytes": 954,
+      "sha256": "1d9d33defa20a8f3b0ae3dbbe246e4a7fc12e99924e07bed13fb79063d3bb3c0"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bixter_2015_Exp2_clustered_uncertainty.json",
+      "size_bytes": 7781,
+      "sha256": "7437f832a0a97837969891fa43cfa270de0ea6a6e26d893665be527c1cd05fd9"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bixter_2015_Exp2_diagnostics.json",
+      "size_bytes": 21612,
+      "sha256": "235eb57b502b7ec5e679b1529e4a2f7fb28dcdd5ab8eee7d2214c98d9874507c"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bixter_2015_Exp2_fit.json",
+      "size_bytes": 4246,
+      "sha256": "e119f343dc89e62aa87945fd9bfeb303eab50cefc3150b47ba20eb2cc19e34ef"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bixter_2015_Exp2_parameters.csv",
+      "size_bytes": 959,
+      "sha256": "656bcf755e9149f608e5357b131b3b2736dd8970309e9f588274c91e0443ae40"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bruder_2021_clustered_uncertainty.json",
+      "size_bytes": 8743,
+      "sha256": "acd1cf26f8c306b033bd24d469011e66af12da88330097c3aa4a0c5a55c395ac"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bruder_2021_diagnostics.json",
+      "size_bytes": 21581,
+      "sha256": "171d94599a5f97d2141f3ac0e0d765d21d562c544e0d920b4c8f9641d17ab655"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bruder_2021_fit.json",
+      "size_bytes": 4211,
+      "sha256": "ea49b041652d01d1ab05c7f79d20883826ebeadbb892ddea0e12dafdf67b4c5f"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Bruder_2021_parameters.csv",
+      "size_bytes": 931,
+      "sha256": "0f627be4b71ad081133ce7232ce09a2df1235e76fd658caad1aa6800eb5dec9c"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Gluth_2017_Exp1_clustered_uncertainty.json",
+      "size_bytes": 6676,
+      "sha256": "a4fe58581fb5cc7eacb3b53a4b642b94f62398cd11d20e26d872016149680b0b"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Gluth_2017_Exp1_diagnostics.json",
+      "size_bytes": 21326,
+      "sha256": "8bd48126033deef2f1db6346276b38893151b70127e9d20a5a05394ede672d2c"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Gluth_2017_Exp1_fit.json",
+      "size_bytes": 4184,
+      "sha256": "a52a44a2d02905ff8e234f020fecc3a80e2dc2727efbe5af100a1e9b31c85b6f"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Gluth_2017_Exp1_parameters.csv",
+      "size_bytes": 944,
+      "sha256": "e594259a4d5762ccf1415cf98e5cec0ceb56feca4809db5110b59d962abc64ca"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Gluth_2017_Exp2_clustered_uncertainty.json",
+      "size_bytes": 8284,
+      "sha256": "c2237070af05a3e4d276d7d2b302f89109366ae1c268c4dbc6e011809f66b95f"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Gluth_2017_Exp2_diagnostics.json",
+      "size_bytes": 21390,
+      "sha256": "fe092b422fba9dca8e7323bf2f1add2aaca4146a481d6af09de30624820dcc3c"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Gluth_2017_Exp2_fit.json",
+      "size_bytes": 4168,
+      "sha256": "7ca2653a94c53e6ad721c10c8c046fbd39a060353bdb045fda6b391614dc1e72"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Gluth_2017_Exp2_parameters.csv",
+      "size_bytes": 948,
+      "sha256": "ba865c0d79149559e7b4726ad70b6a04ad460dd91e1c294b84fc667bdebc92d7"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Herting_2010_clustered_uncertainty.json",
+      "size_bytes": 7959,
+      "sha256": "642a0af53422bf7ea011dbefeec83e866cf9a22a4e162a026d15a1e43679294f"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Herting_2010_diagnostics.json",
+      "size_bytes": 21228,
+      "sha256": "908d09f5ba34ccd89bce993b216b7e94616aa54c538b0e7cda9ea7c7a60e0fee"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Herting_2010_fit.json",
+      "size_bytes": 4176,
+      "sha256": "54a3402e1d4dfde4af102089a52fa03bed93a72f89363ab245a8b91ceea21412"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Herting_2010_parameters.csv",
+      "size_bytes": 945,
+      "sha256": "135c7f38af894f261ef826f14f664747798a52beb8d05e058571eb3489a97ad3"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Knauth_2022_clustered_uncertainty.json",
+      "size_bytes": 8911,
+      "sha256": "3d1dfc050414cc509864f9b4a1f2dddac4dc22fa9033ede87ba72e139a399675"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Knauth_2022_diagnostics.json",
+      "size_bytes": 21435,
+      "sha256": "f3fc08fdffc1bb4a6dbd88eb130fdb3679c508d7a76d6129f65c3ddc739ddd3f"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Knauth_2022_fit.json",
+      "size_bytes": 4201,
+      "sha256": "fed590e090094ab801c3a2a195575fb75b796cb9b58127391a0013058ef7c7ab"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Knauth_2022_parameters.csv",
+      "size_bytes": 932,
+      "sha256": "2c9c9320d9520bb34aebd244decf4ef2ad0c89b7bca60889bf3e0dbd4bbb578c"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Konstantinidis_2020_clustered_uncertainty.json",
+      "size_bytes": 9741,
+      "sha256": "9d7080bc9e9c4235042eae4545f049e89fa578a81791ce83c6b9c868b410f4a4"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Konstantinidis_2020_diagnostics.json",
+      "size_bytes": 21473,
+      "sha256": "89ec696094c3824c784aabb840b422fdc9d29c106cca496ad1736edad2af0ef3"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Konstantinidis_2020_fit.json",
+      "size_bytes": 4261,
+      "sha256": "e7bbd73937acee4f6010e1a137fc41d7ae2fdd278350e2c4a119d1f60076c709"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Konstantinidis_2020_parameters.csv",
+      "size_bytes": 972,
+      "sha256": "c76b66bf95013b9cdf673768606cfc7566955def26c2e7b8500a23f49fed2b65"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Lempert_2015_clustered_uncertainty.json",
+      "size_bytes": 8131,
+      "sha256": "ad94de4e9ad855b3e9f8960ea37e5912664d1fecfe2f1a0a67ea1e2218173332"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Lempert_2015_diagnostics.json",
+      "size_bytes": 21020,
+      "sha256": "53d8523bd4fee5b3b754e16d04f233912b2aa5bbced78343aa08afdece7b9514"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Lempert_2015_fit.json",
+      "size_bytes": 4199,
+      "sha256": "ade8bd00e72a747ab7e77d30cb6eb17182ec5525e2366cd2d56b5abbcb7ecc56"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Lempert_2015_parameters.csv",
+      "size_bytes": 935,
+      "sha256": "714fc57641c72759ce9b18644c82eba834a2e349c88505bddab32bae263591f2"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Robinson_2015_clustered_uncertainty.json",
+      "size_bytes": 9088,
+      "sha256": "17ba2325f6be709ee525e3baf25951a3f5c1239aa337edac00a9b8dd261791c6"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Robinson_2015_diagnostics.json",
+      "size_bytes": 21262,
+      "sha256": "5f4818167501ab7294955cf61af6860dd2d0e135a7369c0498e6b2a292459361"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Robinson_2015_fit.json",
+      "size_bytes": 4275,
+      "sha256": "ae9dc66e4e3eaaed3c47324214e00702f22a8d4ad4286391b5eef5a624a2d046"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Robinson_2015_parameters.csv",
+      "size_bytes": 950,
+      "sha256": "8678ee09deb403abc0d21fd6822e0ae4c3600fe835e2060f05d2b951d7c43774"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Zhou_2022_clustered_uncertainty.json",
+      "size_bytes": 11811,
+      "sha256": "9300b103377419d336b3d67c79002107c8b504d61caafb65a810adba312b0d5a"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Zhou_2022_diagnostics.json",
+      "size_bytes": 21445,
+      "sha256": "f82beb39d88a0eb09b1ccd7f35c39599bd731c0a21bd03073495945b29107603"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Zhou_2022_fit.json",
+      "size_bytes": 4199,
+      "sha256": "66404d0b71f6e350c35dd26c4c267c13701a6545d4276ba20d689e224b538661"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Zhou_2022_parameters.csv",
+      "size_bytes": 915,
+      "sha256": "c308f6dde4a19a5b0c600ff8fa99f5e2fda913a20d3240db37eb049191e35f45"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Zilker_2021_clustered_uncertainty.json",
+      "size_bytes": 28983,
+      "sha256": "5bf9dade75a41c135b2147a42015b57daa47e58ad64178c95eacbf130fc6812b"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Zilker_2021_diagnostics.json",
+      "size_bytes": 21696,
+      "sha256": "a4018b083b2dc15f9808ce53a5e8c38fdb192182751806508eb6489ab00dc192"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Zilker_2021_fit.json",
+      "size_bytes": 4271,
+      "sha256": "e9be33e66ab3a9d0fbe8a6b80fd32b4dc97ded0ea28c17f2bff05432ab67bcba"
+    },
+    {
+      "relative_path": "fits/classical_ddm_itc_Zilker_2021_parameters.csv",
+      "size_bytes": 939,
+      "sha256": "8952cc744bfa1f692b2c5e5ed1a5ee7c0cc7aaba146095319897def2d054cfac"
+    },
+    {
+      "relative_path": "lempert_2015/classical_ddm_itc_lempert_2015_investigation.json",
+      "size_bytes": 16108,
+      "sha256": "36882042d77fe5a4e75b9c0212dfdfcbe4dd1bbe8ac37cd0e41ddd66fabeccd2"
+    },
+    {
+      "relative_path": "lempert_2015/classical_ddm_itc_lempert_2015_participant_deviations.csv",
+      "size_bytes": 6096,
+      "sha256": "6bd5b2a676ec4448a2c52f4d81d0ee0d8c8b4f1fae61d8c7a4c320ff7d320634"
+    },
+    {
+      "relative_path": "lempert_2015/classical_ddm_itc_lempert_2015_profile_likelihood_a.csv",
+      "size_bytes": 2243,
+      "sha256": "95b3121ce2979473f891ab55f4efb92fbfdd54fbd33fdd4936c31195559f1e0c"
+    },
+    {
+      "relative_path": "lempert_2015/figures/classical_ddm_itc_lempert_2015_participant_q90_deviations.png",
+      "size_bytes": 69588,
+      "sha256": "c3ff633bd07f4ed7f8c8253be6fb2e028bba8e29990ee58466f11bdeb78c7180"
+    },
+    {
+      "relative_path": "lempert_2015/figures/classical_ddm_itc_lempert_2015_profile_likelihood_a.png",
+      "size_bytes": 49756,
+      "sha256": "0a19b6ad8e0d5875d78936a713f73073c82f0a6b321cf305345ebda117b06f2e"
+    },
+    {
+      "relative_path": "lempert_2015/figures/classical_ddm_itc_lempert_2015_reaction_time_survival.png",
+      "size_bytes": 77029,
+      "sha256": "0d24a4240cb3536e0d9d54fb427e990ca8aaa64d4917b67a351c8870746c0695"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_checks.json",
+      "size_bytes": 272,
+      "sha256": "61eafef722176ab98534f2b12ac3f54f2476fb4fca55973dea0351ff8d8857de"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_data_audit.json",
+      "size_bytes": 1103,
+      "sha256": "82d722327be923378e29351d07986caffb616d1723256e385094486ce52ee689"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_fits_summary.csv",
+      "size_bytes": 1366,
+      "sha256": "2414631b09c29a39ec580d81197eba04fd1657ee74d1e95c31624a23d4976e89"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_fits_summary.json",
+      "size_bytes": 8627,
+      "sha256": "9f263a55e61fd77eb144bfe681a9d9357339df286eb6747f3df5e9cca8ed930c"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_parameter_recovery_summary.json",
+      "size_bytes": 1376,
+      "sha256": "8631594dbfbc2a0d43df5d3dca8ee01625db5ce4ff3c305aa764a1d498d03c18"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_parameter_recovery_trials.csv",
+      "size_bytes": 1513,
+      "sha256": "9638fe13e4825522ddae311bcf9878f92fe615f086ea579cee84d550903cc935"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_report.md",
+      "size_bytes": 10105,
+      "sha256": "48639dda0b50b214661fcde236866d6080c270d5cf43125d4428041791a172e2"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_study_profile.csv",
+      "size_bytes": 1163,
+      "sha256": "6c65f55b69ffc36d6194a5a08e10c49760ab8955d768d979893e26227b2315d6"
+    },
+    {
+      "relative_path": "pilot/classical_ddm_itc_pilot_validation.json",
+      "size_bytes": 8416,
+      "sha256": "499f32e696a09152a8dfe29df03ea30b58b48a1cae97547bd84ef1f56f5a27e5"
+    },
+    {
+      "relative_path": "pilot/figures/classical_ddm_itc_pilot_Knauth_2022_choice_by_amount_delay.png",
+      "size_bytes": 48813,
+      "sha256": "a1417c36274eb84d1763afa52f0b3ffece4b4c46d1118d5dc66057474cbd3eb7"
+    },
+    {
+      "relative_path": "pilot/figures/classical_ddm_itc_pilot_Knauth_2022_choice_calibration.png",
+      "size_bytes": 38803,
+      "sha256": "2db3b4ba8579164e8c43dd0bd9bff7c5e57a0417e366eed01e5e825952f5238c"
+    },
+    {
+      "relative_path": "pilot/figures/classical_ddm_itc_pilot_Knauth_2022_reaction_time_quantiles.png",
+      "size_bytes": 70984,
+      "sha256": "a9c5aceb87e73c68bc04a8511147465037564f2a037ec3ca72f28307304afd56"
+    },
+    {
+      "relative_path": "pilot/figures/classical_ddm_itc_pilot_Lempert_2015_choice_by_amount_delay.png",
+      "size_bytes": 49170,
+      "sha256": "79ed09501e946b510a67d9b07bb8ef4df1f41672a762311c27421de1edb6c6a0"
+    },
+    {
+      "relative_path": "pilot/figures/classical_ddm_itc_pilot_Lempert_2015_choice_calibration.png",
+      "size_bytes": 41988,
+      "sha256": "34b898a72c4ab52433c0a8a11acd4aa419cc12d33cbfecb1c26fb548dc3a9693"
+    },
+    {
+      "relative_path": "pilot/figures/classical_ddm_itc_pilot_Lempert_2015_reaction_time_quantiles.png",
+      "size_bytes": 62638,
+      "sha256": "449c28e99cb565dc4336f16545a1d5037f0801c642bdb3fa5241d2b9a96bb510"
+    },
+    {
+      "relative_path": "pilot/figures/classical_ddm_itc_pilot_parameter_recovery.png",
+      "size_bytes": 78669,
+      "sha256": "10cdb3bff63568d5dbdda7c8c083a6c4e19af3516c5f00ea29291c08b2e87d93"
+    },
+    {
+      "relative_path": "pilot/fits/classical_ddm_itc_pilot_Knauth_2022_diagnostics.json",
+      "size_bytes": 6559,
+      "sha256": "9614fb8d1a892fb9257932326b00e64b4ca4f9bb0d024a661924fcafdfe0f217"
+    },
+    {
+      "relative_path": "pilot/fits/classical_ddm_itc_pilot_Knauth_2022_fit.json",
+      "size_bytes": 3956,
+      "sha256": "1453d95163ffc7ec1fee168973848ac3092338df04fa299e6bf8eadaa7dc1759"
+    },
+    {
+      "relative_path": "pilot/fits/classical_ddm_itc_pilot_Lempert_2015_diagnostics.json",
+      "size_bytes": 6146,
+      "sha256": "eabb4c5cba6169c361f9a585f7eced332dc79f340c44b89f754b7fc1c8edaa27"
+    },
+    {
+      "relative_path": "pilot/fits/classical_ddm_itc_pilot_Lempert_2015_fit.json",
+      "size_bytes": 3958,
+      "sha256": "3b32f11a1b6b1eb22e78517c14003044fa2678e10cf2b17c43cd2e5013013f2a"
+    },
+    {
+      "relative_path": "reports/classical_ddm_itc_full_analysis_report.md",
+      "size_bytes": 24894,
+      "sha256": "bf7a4fd1f448143036e0b5f93a828ba5568ea9af450b9df6d3761ca868fdbaa8"
+    },
+    {
+      "relative_path": "reports/classical_ddm_itc_lempert_2015_diagnostic_report.md",
+      "size_bytes": 4288,
+      "sha256": "f6d7d05ce3440830eb693a7b18a7b6e49cc059f695a2c4635277de15330a343d"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_12_study_fit_summary.csv",
+      "size_bytes": 11019,
+      "sha256": "6d13b9b4175e08aff4618c90718d641d20bdd2ac63c41eaebbc0abaa86d03ad3"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_12_study_fit_summary.json",
+      "size_bytes": 24389,
+      "sha256": "68a651106350c1831f6c9ba0be58cba9991409170bfccf576d41ac22b98fca8b"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_5_fold_cross_validation_assignments.csv",
+      "size_bytes": 16220,
+      "sha256": "e523f67ff90c47d8f7e8e9438d3d7c6fb74397e20b89255365c555751bfccdb1"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_5_fold_cross_validation_folds.csv",
+      "size_bytes": 22895,
+      "sha256": "48c1518a4f59116c4bd7580d62dd0658d347ff5035514c8286dd595a8123ee25"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_5_fold_cross_validation_summary.csv",
+      "size_bytes": 6047,
+      "sha256": "e816a6a20ba08ed055ea33be4adf26bb73367b9139f729e383c8bddb4ddbf30e"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_5_fold_cross_validation_summary.json",
+      "size_bytes": 16078,
+      "sha256": "d2b465d9ae4ce0c06e7348803b7b2938eb6a7727c262e9ca42d417e94fa84339"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_analysis_checks.json",
+      "size_bytes": 350,
+      "sha256": "246d572b0854fafe35234968bc11405f3b48009b5cce606715bbf4a680d18bc4"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_clustered_uncertainty_summary.csv",
+      "size_bytes": 7774,
+      "sha256": "069f2ecd217e791acfdb8ec94ad59def304a838c56c5cad948bc60eb02424970"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_meta_analysis_descriptive.csv",
+      "size_bytes": 716,
+      "sha256": "ad2c93fe745f286f82145fedfe5e5fd2d442d33482c99c2e9172f477ce4e51af"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_parameter_estimates_long.csv",
+      "size_bytes": 8661,
+      "sha256": "6c86b6e0abbc7e027c1ed44c7652424051238696531b4e38f7809f226dfe7569"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_random_effects_meta_analysis.csv",
+      "size_bytes": 1242,
+      "sha256": "7fbfd2e3ffecdd314b3c1e7f655c680368a03451743b17b4cb26ee42e11e29d6"
+    },
+    {
+      "relative_path": "tables/classical_ddm_itc_random_effects_meta_analysis.json",
+      "size_bytes": 2281,
+      "sha256": "bb235d27dd863d7d22a6eea1c59bd92ab1c9e8bd88ee0fe35ed47228cfd49e84"
+    }
+  ]
+}

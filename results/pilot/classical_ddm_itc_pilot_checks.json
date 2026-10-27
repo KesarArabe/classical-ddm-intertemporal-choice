@@ -1,0 +1,9 @@
+{
+  "all_fits_converged": true,
+  "all_hessians_positive_definite": true,
+  "all_optimizer_starts_agree": true,
+  "all_t0_below_min_rt": true,
+  "all_auc_above_0_50": true,
+  "all_coverage_between_0_60_and_0_95": true,
+  "recovery_relative_rmse_below_0_30": true
+}

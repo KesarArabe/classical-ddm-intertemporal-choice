@@ -1,0 +1,11 @@
+{
+  "dataset_hash_verified": true,
+  "expected_sample_size": true,
+  "all_12_studies_fitted": true,
+  "all_fits_converged": true,
+  "all_hessians_positive_definite": true,
+  "cross_validation_complete": true,
+  "lempert_investigation_written": true,
+  "pyddm_max_abs_error_below_1e_6": true,
+  "normalisation_total_error_below_1e_4": true
+}

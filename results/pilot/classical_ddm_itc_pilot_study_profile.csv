@@ -1,0 +1,13 @@
+paper,trials,subjects,median_trials_per_subject,rt_median,choice_ll,time_pressure,rt_in_full_seconds,rt_data_analyzed,mouse_or_finger,presentation
+Bixter_2015_Exp1,9333,56,168.0,1.3503772,0.638594235508411,0,0,1,False,Simultaneous
+Bixter_2015_Exp2,4652,28,168.0,1.3133308398799999,0.8123387790197765,0,0,1,False,Simultaneous
+Bruder_2021,9784,34,288.0,1.986570477485655,0.6205028618152085,0,0,1,False,Simultaneous
+Gluth_2017_Exp1,1236,21,60.0,4.375,0.5485436893203883,0,0,1,False,Simultaneous
+Gluth_2017_Exp2,1763,31,60.0,4.824,0.526942711287578,0,0,1,False,Simultaneous
+Herting_2010,3169,29,110.0,3.484,0.5878826128116125,0,0,1,False,Simultaneous
+Knauth_2022,8689,35,278.0,0.8218,0.5946599148348487,0,0,1,False,Simultaneous
+Konstantinidis_2020,14759,40,380.0,1.206,0.41351040043363374,0,0,1,False,Simultaneous
+Lempert_2015,10589,30,355.5,1.699,0.5096798564548116,0,0,1,False,Simultaneous
+Robinson_2015,8520,36,242.0,1.370051728220935,0.5764084507042253,0,0,1,False,Simultaneous
+Zhou_2022,2604,53,50.0,3.8200000000000003,0.28648233486943164,0,0,1,False,Simultaneous
+Zilker_2021,11368,160,72.0,3.63704791439,0.4931386347642505,0,0,1,False,Simultaneous

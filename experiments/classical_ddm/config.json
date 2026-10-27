@@ -1,0 +1,75 @@
+{
+  "data": {
+    "path": "../data/itc_all_data.csv",
+    "sha256": "14e5bf2f6434d791a5f68d8f0e4cec41e4c6bb671ce6fd80e83879f9759e0517",
+    "size": 484996376
+  },
+  "cleaning": {
+    "rt_min": 0.2,
+    "rt_max": 20.0,
+    "require_positive_amounts": true,
+    "require_ss_time_lt_ll_time": true,
+    "require_valid_choice": true,
+    "exclude_time_pressure": true,
+    "required_presentation": "Simultaneous",
+    "exclude_mouse_finger": true,
+    "required_rt_in_full_seconds": 0,
+    "required_rt_data_analyzed": 1
+  },
+  "expected_primary": {
+    "studies": 12,
+    "subjects": 553,
+    "trials": 86466
+  },
+  "primary_studies": [
+    "Bixter_2015_Exp1",
+    "Bixter_2015_Exp2",
+    "Bruder_2021",
+    "Gluth_2017_Exp1",
+    "Gluth_2017_Exp2",
+    "Herting_2010",
+    "Knauth_2022",
+    "Konstantinidis_2020",
+    "Lempert_2015",
+    "Robinson_2015",
+    "Zhou_2022",
+    "Zilker_2021"
+  ],
+  "pilot_studies": ["Lempert_2015", "Knauth_2022"],
+  "model": {
+    "n_terms": 100,
+    "fixed_noise": 1.0,
+    "fixed_start_proportion": 0.5
+  },
+  "fitting": {
+    "n_starts": 5,
+    "maxiter": 400,
+    "start_objective_tolerance": 0.01
+  },
+  "validation": {
+    "n_recovery_datasets": 5,
+    "n_recovery_trials": 3000,
+    "simulation_dt": 0.0001,
+    "recovery_true_params": {
+      "a": 1.2,
+      "t0": 0.30,
+      "v0": 0.20,
+      "beta_amount": 0.8,
+      "beta_delay": -0.6
+    },
+    "seed": 20261024
+  },
+  "ppc": {
+    "n_sim": 20000,
+    "seed": 20261024,
+    "simulation_dt": 0.0001
+  },
+  "cross_validation": {
+    "n_folds": 5,
+    "seed": 20261024,
+    "n_starts": 2
+  },
+  "lempert": {
+    "profile_points": 15
+  }
+}
